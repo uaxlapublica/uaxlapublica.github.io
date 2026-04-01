@@ -11,117 +11,117 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.7;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3e7cb 100%);
-      color: #2c3e50;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      background: #fafafa;
+      color: #333;
       min-height: 100vh;
     }
     header {
-      background: linear-gradient(135deg, #188038 0%, #0f5233 100%);
+      background: #188038;
       color: white;
-      padding: 4rem 1rem;
+      padding: 3rem 1rem;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #0f5233;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
+      font-weight: 600;
+      letter-spacing: 0;
     }
     .highlight {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.95);
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.9);
       max-width: 700px;
       margin: 0 auto;
-      line-height: 1.8;
+      line-height: 1.6;
     }
     section {
-      padding: 3rem 1rem;
+      padding: 2.5rem 1rem;
       max-width: 900px;
-      margin: 1rem auto;
+      margin: 0 auto;
       background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      border-bottom: 1px solid #e5e5e5;
     }
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
       color: #188038;
-      border-bottom: 3px solid #188038;
+      border-bottom: 2px solid #188038;
       padding-bottom: 0.5rem;
-      font-weight: 700;
+      font-weight: 600;
     }
     h3 {
-      font-size: 1.3rem;
+      font-size: 1.15rem;
       color: #188038;
-      margin-top: 1.5rem;
+      margin-top: 1.2rem;
       margin-bottom: 0.8rem;
       font-weight: 600;
     }
     p {
       margin-bottom: 1rem;
-      font-size: 1rem;
-      line-height: 1.8;
+      font-size: 0.95rem;
+      line-height: 1.7;
     }
-    ul {
-      padding-left: 1.8rem;
+    ul, ol {
+      padding-left: 1.5rem;
       margin-bottom: 1rem;
     }
     li {
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
       line-height: 1.6;
+      font-size: 0.95rem;
     }
     .objectives-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      gap: 1.2rem;
       margin: 1.5rem 0;
     }
     .objective-card {
-      background: linear-gradient(135deg, #e8f8f5 0%, #d5f4e6 100%);
-      padding: 1.5rem;
-      border-left: 4px solid #188038;
-      border-radius: 4px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #f5f5f5;
+      padding: 1.2rem;
+      border-left: 3px solid #188038;
+      transition: none;
     }
     .objective-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(24, 128, 56, 0.15);
+      transform: none;
+      box-shadow: none;
+      background: #efefef;
     }
     .objective-card h4 {
       color: #188038;
       margin-bottom: 0.6rem;
       font-weight: 600;
+      font-size: 1rem;
     }
     .losu-highlight {
-      background: linear-gradient(135deg, #fff9e6 0%, #fffacd 100%);
-      border-left: 4px solid #188038;
-      padding: 1.2rem;
-      border-radius: 4px;
+      background: #f0f0f0;
+      border-left: 3px solid #188038;
+      padding: 1rem;
       margin: 1.5rem 0;
     }
     .losu-highlight strong {
       color: #188038;
     }
     footer {
-      background: #2c3e50;
+      background: #188038;
       color: white;
       text-align: center;
       padding: 1.5rem;
-      margin-top: 2rem;
+      margin-top: 0;
+      font-size: 0.95rem;
     }
     a {
       color: #188038;
-      text-decoration: none;
+      text-decoration: underline;
       font-weight: 500;
-      transition: color 0.3s ease;
+      transition: color 0.2s ease;
     }
     a:hover {
       color: #0f5233;
-      text-decoration: underline;
     }
     .contact-item {
       margin: 0.8rem 0;
@@ -141,7 +141,7 @@
 </header>
 
 <section>
-  <h2>📜 Nuestro Manifiesto</h2>
+  <h2>Nuestro Manifiesto</h2>
   <p>
     La universidad pública andaluza vive una encrucijada histórica. Frente a quienes quieren convertir el conocimiento en mercancía y el derecho al estudio en privilegio de renta, alzamos una respuesta colectiva.
   </p>
@@ -149,39 +149,39 @@
     <strong>Nos unimos organizaciones estudiantiles, sindicales, docentes y movimientos sociales de toda Andalucía</strong> para proclamar que la educación superior es un derecho universal, un motor de igualdad y un pilar democrático irrenunciable.
   </p>
   
-  <p style="text-align: center; margin-top: 1.5rem;">
-    📄 <a href="Manifiesto.pdf" target="_blank" style="font-weight: 700; font-size: 1.1rem;">Descarga el Manifiesto Completo (PDF)</a>
+  <p style="margin-top: 1.5rem;">
+    <a href="Manifiesto.pdf" target="_blank">Descarga el Manifiesto Completo (PDF)</a>
   </p>
 </section>
 
 <section>
-  <h2>🛡️ Por qué defendemos la pública</h2>
+  <h2>Por qué defendemos la pública</h2>
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>🚀 Ascensor Social</h4>
+      <h4>Ascensor Social</h4>
       <p>La pública es la única garantía de que el talento no dependa del código postal ni de la cuenta corriente. Defender la universidad pública es defender la meritocracia real.</p>
     </div>
     <div class="objective-card">
-      <h4>🔬 Soberanía Científica</h4>
+      <h4>Soberanía Científica</h4>
       <p>La ciencia pública sostiene los proyectos de largo plazo que el mercado abandona. Sin financiación potente, Andalucía pierde capacidad de transformar su modelo productivo y depender de sus propios saberes.</p>
     </div>
     <div class="objective-card">
-      <h4>💭 Pensamiento Crítico</h4>
+      <h4>Pensamiento Crítico</h4>
       <p>Frente a la rentabilidad inmediata, defendemos una universidad autónoma que proteja la pluralidad del conocimiento. Sin pensamiento libre, no hay democracia sana.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>🎯 Objetivos</h2>
+  <h2>Objetivos</h2>
   <p>
     Nuestra lucha se centra en conseguir que la universidad pública andaluza sea financiada adecuadamente para garantizar una educación de calidad, accesible para todos y todas.
   </p>
   
-  <div class="losu-highlight" style="background: linear-gradient(135deg, #ffe6e6 0%, #ffcccc 100%); border-left-color: #e74c3c;">
-    <h3 style="color: #c0392b; margin-top: 0; border-bottom: none; padding-bottom: 0; margin-bottom: 0.8rem;">💥 NUESTRA EXIGENCIA CENTRAL</h3>
-    <p style="font-size: 1.1rem; margin: 0; margin-bottom: 0.8rem;">
-      <strong style="color: #c0392b; font-size: 1.15rem;">Que la Junta de Andalucía eleve la financiación de las universidades públicas al 1% del PIB andaluz antes de 2030.</strong>
+  <div class="losu-highlight">
+    <h3 style="margin-top: 0; border-bottom: none; padding-bottom: 0; margin-bottom: 0.8rem;">NUESTRA EXIGENCIA CENTRAL</h3>
+    <p style="font-size: 1rem; margin: 0; margin-bottom: 0.8rem;">
+      <strong>Que la Junta de Andalucía eleve la financiación de las universidades públicas al 1% del PIB andaluz antes de 2030.</strong>
     </p>
     <p style="margin: 0; color: #555; font-size: 0.95rem;">
       La retórica no basta si no va acompañada de recursos. La Ley Orgánica del Sistema Universitario (LOSU) marca una senda obligatoria. La Junta de Andalucía no puede mirar hacia otro lado.
@@ -190,37 +190,37 @@
   
   <div class="objectives-grid">
     <div class="objective-card">
-      <h4>💰 Financiación Justa</h4>
+      <h4>Financiación Justa</h4>
       <p>Exigimos que se destine el <strong>1% del PIB andaluz</strong> a las universidades públicas en 2030, tal y como obliga la LOSU.</p>
     </div>
     <div class="objective-card">
-      <h4>⚖️ Cumplimiento LOSU</h4>
+      <h4>Cumplimiento LOSU</h4>
       <p>Garantizar que la Ley Orgánica del Sistema Universitario (LOSU) se cumpla realmente con financiación suficiente.</p>
     </div>
     <div class="objective-card">
-      <h4>📚 Calidad Educativa</h4>
+      <h4>Calidad Educativa</h4>
       <p>Asegurar que la calidad de la educación no dependa de la capacidad de pago de cada estudiante.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>✊ Nuestro Compromiso de Acción</h2>
+  <h2>Nuestro Compromiso de Acción</h2>
   <p>
     Esta plataforma nace para actuar, no para declarar. Nos comprometemos a:
   </p>
-  <ol style="padding-left: 2rem;">
+  <ol>
     <li><strong>Tejer red en todos los campus andaluces</strong> para actuar como un solo bloque frente a los recortes y la privatización.</li>
     <li><strong>Presionar al Gobierno Andaluz</strong> hasta que cumpla con los objetivos de financiación legalmente establecidos.</li>
     <li><strong>Vigilar y denunciar</strong> cualquier intento de privatización encubierta o desvío de fondos públicos hacia intereses privados.</li>
   </ol>
-  <p style="margin-top: 1.5rem; font-size: 1.05rem; font-weight: 500; color: #188038; text-align: center;">
-    ¡Por una universidad financiada, democrática y radicalmente pública!
+  <p style="margin-top: 1.5rem; font-weight: 500; color: #188038; text-align: center;">
+    Por una universidad financiada, democrática y radicalmente pública
   </p>
 </section>
 
 <section>
-  <h2>👥 Quiénes somos</h2>
+  <h2>Quiénes somos</h2>
   <p>
     Somos una plataforma formada por <strong>colectivos estudiantiles, profesorado, personal de administración y servicios</strong> de las universidades públicas andaluzas. Nos une la convicción de que la universidad pública es imprescindible para el desarrollo social, cultural y económico de Andalucía.
   </p>
@@ -230,25 +230,25 @@
 </section>
 
 <section>
-  <h2>🤝 Colectivos Miembros</h2>
+  <h2>Colectivos Miembros</h2>
 
-  <h3>🔴 Málaga</h3>
+  <h3>Málaga</h3>
   <ul>
     <li><strong>UMA x la Pública</strong> - Plataforma de estudiantes, profesorado y PAS de la Universidad de Málaga</li>
     <li>[Otros colectivos]</li>
   </ul>
 
-  <h3>🟡 Sevilla</h3>
+  <h3>Sevilla</h3>
   <ul>
     <li>[Colectivos e iniciativas]</li>
   </ul>
 
-  <h3>🟢 Granada</h3>
+  <h3>Granada</h3>
   <ul>
     <li>[Colectivos e iniciativas]</li>
   </ul>
 
-  <h3>🟣 Córdoba, Jaén, Huelva y otras provincias</h3>
+  <h3>Córdoba, Jaén, Huelva y otras provincias</h3>
   <ul>
     <li>[Colectivos e iniciativas]</li>
   </ul>
@@ -259,7 +259,7 @@
 </section>
 
 <section>
-  <h2>📋 Actividades y Movilizaciones</h2>
+  <h2>Actividades y Movilizaciones</h2>
   <ul>
     <li><strong>Encuentros interuniversitarios</strong> - Coordinación entre plataformas de diferentes universidades</li>
     <li><strong>Comunicados y escritos</strong> - Dirigidos a administraciones y sociedad</li>
@@ -269,7 +269,7 @@
 </section>
 
 <section>
-  <h2>📰 Prensa y Comunicación</h2>
+  <h2>Prensa y Comunicación</h2>
   <ul>
     <li><a href="#">[Comunicado o noticia sobre la LOSU]</a></li>
     <li><a href="#">[Noticia sobre financiación]</a></li>
@@ -278,19 +278,19 @@
 </section>
 
 <section>
-  <h2>💬 Contacto</h2>
+  <h2>Contacto</h2>
   <p>¿Quieres saber más sobre nuestras luchas o unirte a la plataforma? ¡No dudes en contactar!</p>
   
   <div class="contact-item">
-    <strong>📧 Email:</strong> <a href="mailto:uaxlapublica@gmail.com">uaxlapublica@gmail.com</a>
+    <strong>Email:</strong> <a href="mailto:uaxlapublica@gmail.com">uaxlapublica@gmail.com</a>
   </div>
   
   <div class="contact-item">
-    <strong>📋 Formulario de adhesión:</strong> <a href="#">[Enlace al formulario]</a>
+    <strong>Formulario de adhesión:</strong> <a href="#">[Enlace al formulario]</a>
   </div>
 
   <div class="contact-item">
-    <strong>📱 Redes sociales:</strong> [Instagram • Twitter • TikTok]
+    <strong>Redes sociales:</strong> [Instagram • Twitter • TikTok]
   </div>
 </section>
 
