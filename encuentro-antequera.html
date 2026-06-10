@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuentro Andaluz - Universidades Andaluzas por la Pública</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      background: #fafafa;
+      color: #333;
+      min-height: 100vh;
+    }
+    header {
+      background: #188038;
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-bottom: 3px solid #0f5233;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+    .highlight {
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    section {
+      padding: 2.5rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+      color: #188038;
+      border-bottom: 2px solid #188038;
+      padding-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #188038;
+      margin-top: 1.2rem;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+    p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    .info-card {
+      background: #f5f5f5;
+      padding: 1.5rem;
+      border-left: 3px solid #188038;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+    }
+    .info-card h4 {
+      color: #188038;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .grid-item {
+      background: #f5f5f5;
+      padding: 1.5rem;
+      border-left: 3px solid #188038;
+      border-radius: 4px;
+    }
+    .grid-item h4 {
+      color: #188038;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .qr-section {
+      background: linear-gradient(135deg, #f0f8f4 0%, #e8f5f0 100%);
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      margin: 2rem 0;
+      border: 2px solid #188038;
+    }
+    .qr-section h3 {
+      margin-top: 0;
+      color: #188038;
+      font-size: 1.2rem;
+    }
+    .qr-placeholder {
+      background: white;
+      width: 250px;
+      height: 250px;
+      margin: 1.5rem auto;
+      border: 2px dashed #188038;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #188038;
+      font-weight: 600;
+      border-radius: 8px;
+    }
+    .timeline {
+      position: relative;
+      padding: 2rem 0;
+    }
+    .timeline-item {
+      padding-left: 2.5rem;
+      padding-bottom: 2rem;
+      position: relative;
+    }
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: #188038;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 0 0 2px #188038;
+    }
+    .timeline-item:not(:last-child):after {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 20px;
+      width: 4px;
+      height: calc(100% + 2rem);
+      background: #188038;
+    }
+    .timeline-item h4 {
+      color: #188038;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .footer-nav {
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 2rem;
+      border-top: 2px solid #e5e5e5;
+    }
+    .footer-nav a {
+      display: inline-block;
+      background: #188038;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      margin: 0.5rem;
+      font-weight: 500;
+      transition: background 0.2s ease;
+    }
+    .footer-nav a:hover {
+      background: #0f5233;
+      color: white;
+    }
+    footer {
+      background: #188038;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 0;
+      font-size: 0.95rem;
+    }
+    a {
+      color: #188038;
+      text-decoration: underline;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: #0f5233;
+    }
+    .alert {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+      color: #856404;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🗓️ Encuentro Andaluz</h1>
+  <p class="highlight">
+    <strong>Primer encuentro presencial de la plataforma andaluza en defensa de las universidades públicas</strong>
+  </p>
+  <p class="highlight" style="font-style: italic; margin-top: 0.8rem; font-size: 0.95rem; font-weight: 400;">
+    Coordinación de colectivos estudiantiles, sindicales y sociales de toda Andalucía
+  </p>
+</header>
+
+<section>
+  <h2>Detalles del Encuentro</h2>
+  
+  <div class="grid-2">
+    <div class="grid-item">
+      <h4>📅 Fecha</h4>
+      <p><strong>21 de junio de 2026</strong></p>
+    </div>
+    <div class="grid-item">
+      <h4>⏰ Hora</h4>
+      <p><strong>10:30 - 14:30</strong></p>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h4>📍 Lugar</h4>
+    <p><strong>Sede de CCOO, Antequera</strong></p>
+  </div>
+</section>
+
+<section>
+  <h2>Orden del Día</h2>
+  
+  <ol>
+    <li><strong>Análisis de la situación</strong> en las universidades andaluzas y del resto del Estado</li>
+    <li><strong>Coordinación de colectivos</strong> para la acción conjunta</li>
+    <li><strong>Hoja de ruta y acciones para el curso 2026/27</strong></li>
+    <li><strong>Reparto de tareas</strong> entre los colectivos participantes</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Participación de Colectivos</h2>
+  
+  <p>
+    Este encuentro es <strong>esencial para unir fuerzas</strong> y construir una coordinación sólida en toda Andalucía. 
+    Si tu colectivo quiere ser parte de esta movilización histórica en defensa de la universidad pública, 
+    <strong>¡no puedes faltar!</strong>
+  </p>
+
+  <div style="text-align: center; margin: 2rem 0;">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7eHNswuPv1aBLcE2krS5QPHS-NZPne78b4NOuIkRL46NSLA/viewform?usp=dialog" target="_blank" style="display: inline-block; background: #188038; color: white; padding: 1.2rem 2rem; font-weight: 600; text-decoration: none; border-radius: 4px; font-size: 1rem; transition: background 0.2s ease;" onmouseover="this.style.background='#0f5233'" onmouseout="this.style.background='#188038'">
+      ✍️ Formulario de Inscripción
+    </a>
+  </div>
+  
+  <p style="text-align: center; font-size: 0.95rem; color: #555; margin-top: 1.5rem;">
+    <strong>¡Anímate!</strong> Rellena el formulario y ayúdanos a hacer de este encuentro un punto de inflexión para la defensa de la educación pública andaluza.
+  </p>
+</section>
+
+<section style="background: linear-gradient(135deg, #188038 0%, #0f5233 100%); color: white; text-align: center; padding: 3rem 1rem;">
+  <h2 style="color: white; border: none; font-size: 2.2rem; margin-bottom: 1.5rem;">
+    ¡Nos vemos en Antequera!
+  </h2>
+  <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+    Construyamos juntas la coordinación andaluza para defender la universidad pública
+  </p>
+  <p style="font-size: 1rem; opacity: 0.95;">
+    Un encuentro histórico para organizarnos, coordinar acciones y tejer una red de resistencia en todos los campus andaluces
+  </p>
+</section>
+
+<section>
+  <h2>Contacto</h2>
+  <p>¿Tienes preguntas sobre el encuentro? Contacta con nosotras:</p>
+  
+  <div style="margin-top: 1.5rem;">
+    <p><strong>Email:</strong> <a href="mailto:uaxlapublica@gmail.com">uaxlapublica@gmail.com</a></p>
+    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/uaxlapublica/" target="_blank">@uaxlapublica</a></p>
+  </div>
+
+  <div class="footer-nav">
+    <a href="index.html">← Volver a la página principal</a>
+  </div>
+</section>
+
+<footer>
+  <p><strong>© 2026 Universidades Andaluzas por la Pública</strong></p>
+  <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">
+    Por una universidad pública, de calidad, accesible y para todas las personas
+  </p>
+</footer>
+
+</body>
+</html>
