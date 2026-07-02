@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8 de Julio - Encuentro Online UAX</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      background: #fafafa;
+      color: #333;
+      min-height: 100vh;
+    }
+    header {
+      background: #188038;
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-bottom: 3px solid #0f5233;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+    .highlight {
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    section {
+      padding: 2.5rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+      color: #188038;
+      border-bottom: 2px solid #188038;
+      padding-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #188038;
+      margin-top: 1.2rem;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+    p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    .info-card {
+      background: #f5f5f5;
+      padding: 1.5rem;
+      border-left: 3px solid #188038;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+    }
+    .info-card h4 {
+      color: #188038;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+    .highlight-box {
+      background: linear-gradient(135deg, #f0f8f4 0%, #e8f5f0 100%);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 2px solid #188038;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .highlight-box h3 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: #188038;
+    }
+    .highlight-box p {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .grid-item {
+      background: #f5f5f5;
+      padding: 1.5rem;
+      border-left: 3px solid #188038;
+      border-radius: 4px;
+    }
+    .grid-item h4 {
+      color: #188038;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: #188038;
+      color: white;
+      padding: 1rem 2rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.2s ease;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background: #0f5233;
+      color: white;
+      text-decoration: none;
+    }
+    .objectives {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .objective {
+      background: #f5f5f5;
+      padding: 1.2rem;
+      border-left: 3px solid #188038;
+      border-radius: 4px;
+    }
+    .objective h4 {
+      color: #188038;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+    .objective p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+    .contact-section {
+      background: linear-gradient(135deg, #f0f8f4 0%, #e8f5f0 100%);
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      border: 2px solid #188038;
+    }
+    .contact-section h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+    .contact-section p {
+      text-align: center;
+      font-size: 1rem;
+    }
+    .contact-section a {
+      display: inline-block;
+      background: #188038;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    .contact-section a:hover {
+      background: #0f5233;
+      text-decoration: none;
+    }
+    .footer-nav {
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 2rem;
+      border-top: 2px solid #e5e5e5;
+    }
+    .footer-nav a {
+      display: inline-block;
+      background: #188038;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      margin: 0.5rem;
+      font-weight: 500;
+      transition: background 0.2s ease;
+    }
+    .footer-nav a:hover {
+      background: #0f5233;
+      color: white;
+    }
+    footer {
+      background: #188038;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 0;
+      font-size: 0.95rem;
+    }
+    a {
+      color: #188038;
+      text-decoration: underline;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: #0f5233;
+    }
+    .participations-intro {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+      color: #856404;
+    }
+    .social-share {
+      text-align: center;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: #f5f5f5;
+      border-radius: 4px;
+    }
+    .social-share h4 {
+      color: #188038;
+      margin-bottom: 1rem;
+    }
+    .social-share p {
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .objectives {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>💚 8 de Julio</h1>
+  <p class="highlight">
+    <strong>Encuentro Online Abierto en Defensa de la Educación Pública Andaluza</strong>
+  </p>
+  <p class="highlight" style="font-style: italic; margin-top: 0.8rem; font-size: 0.95rem; font-weight: 400;">
+    Un espacio para toda la comunidad educativa: organizaciones, colectivos, plataformas y personas comprometidas con la educación pública
+  </p>
+</header>
+
+<section>
+  <h2>� ¿Por Qué Este Encuentro?</h2>
+  
+  <p>
+    Este encuentro surge de las conversaciones entre <strong>#NoviembreVerde</strong> y <strong>Universidades Andaluzas por la Pública (UAX)</strong>, 
+    pero <strong>está completamente abierto a toda la comunidad educativa</strong>: organizaciones sindicales, estudiantiles, sociales, educativas y colectivos 
+    de cualquier ámbito que compartan el objetivo de defender la educación pública andaluza.
+  </p>
+
+  <div class="highlight-box">
+    <h3 style="margin-top: 0;">🏃 Objetivo Principal del 8 de Julio</h3>
+    <p style="font-size: 1.05rem; margin-bottom: 0;">
+      <strong>Establecer las bases del encuentro presencial</strong> que se realizará el 18 o 19 de julio en Antequera o alrededores.
+    </p>
+  </div>
+
+  <p style="margin-top: 1.5rem;">
+    Es un espacio de <strong>construcción colectiva</strong> donde queremos conocernos, compartir experiencias de otras comunidades autónomas, 
+    escuchar todas las voces y preparar conjuntamente el próximo encuentro presencial.
+  </p>
+</section>
+
+<section>
+  <h2>📅 Detalles del Encuentro Online</h2>
+  
+  <p style="margin-bottom: 1rem;"><strong>8 de julio | 17:00 h | Encuentro Online</strong></p>
+
+  <div class="highlight-box">
+    <h3 style="margin-top: 0;">🔗 Acceso a la Reunión Online</h3>
+    <p style="margin-bottom: 0.5rem;">Únete a través de este link:</p>
+    <a href="https://meet.google.com/fkp-qbuq-fmn" target="_blank" class="btn-primary">📱 Acceder a la Reunión</a>
+    <p style="font-size: 0.9rem; margin-top: 1rem; color: #555; font-style: italic;">
+      meet.google.com/fkp-qbuq-fmn
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>📋 Orden del Día</h2>
+  
+  <div class="info-card">
+    <ol>
+      <li><strong>Presentación</strong> de la reunión y explicación del proceso</li>
+      <li><strong>Propuesta de encuentro presencial</strong> el 18 o 19 de julio en Antequera o alrededores</li>
+      <li><strong>Experiencias en otras comunidades:</strong> aprendizajes de movimientos en Valencia, Cataluña y Madrid</li>
+      <li><strong>Turno abierto de palabra</strong> para cualquier colectivo, organización o persona que quiera expresar su opinión sobre el encuentro presencial <em>(máximo 2 minutos por intervención)</em></li>
+      <li><strong>Síntesis</strong> y próximos pasos</li>
+    </ol>
+    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff3cd; border-left: 3px solid #ffc107; border-radius: 4px;">
+      <strong>⚠️ Importante:</strong> El objetivo principal de este encuentro es establecer conjuntamente las bases, metodología y contenidos del encuentro presencial.
+    </p>
+  </div>
+</section>
+
+
+
+<section style="background: linear-gradient(135deg, #188038 0%, #0f5233 100%); color: white; text-align: center; padding: 3rem 1rem;">
+  <h2 style="color: white; border: none; font-size: 2rem; margin-bottom: 1.5rem;">
+    Cuando organizaciones tan diferentes deciden sentarse en la misma mesa
+  </h2>
+  <p style="font-size: 1rem; margin-bottom: 1rem; opacity: 0.95;">
+    Quizá está empezando a ocurrir algo importante.
+  </p>
+  <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">
+    💚 Seguimos construyendo, entre todas y todos, una respuesta común para la educación pública andaluza. ✊🏫
+  </p>
+</section>
+
+<section>
+  <h2>📚 Descargas y Recursos</h2>
+  
+  <p>A continuación encontrarás los materiales, manifiestos y enlaces de interés relacionados con este encuentro y la defensa de la educación pública andaluza.</p>
+
+  <h3 style="margin-top: 2rem; color: #188038; border-bottom: 2px solid #188038; padding-bottom: 0.5rem;">🟢 #NoviembreVerde</h3>
+  
+  <div style="background: #f0f8f4; padding: 1.5rem; border-left: 4px solid #188038; border-radius: 4px; margin: 1.5rem 0;">
+    <h4 style="color: #188038; margin-bottom: 0.8rem;">Materiales de #NoviembreVerde</h4>
+    <p>Descarga el cartel y el manifiesto de #NoviembreVerde para compartir y conocer el posicionamiento de la plataforma.</p>
+    
+    <div style="margin-top: 1.5rem;">
+      <p style="font-weight: 600; margin-bottom: 0.8rem;">📄 Cartel #NoviembreVerde</p>
+      <a href="cartel.jpg" download class="btn-primary" style="display: inline-block; margin-right: 0.5rem; margin-bottom: 0.5rem;">↓ JPG</a>
+      <a href="cartel.pdf" download class="btn-primary" style="display: inline-block;">↓ PDF</a>
+    </div>
+    
+    <div style="margin-top: 1.5rem;">
+      <p style="font-weight: 600; margin-bottom: 0.8rem;">📋 Manifiesto #NoviembreVerde</p>
+      <a href="manifiesto_verde.pdf" download class="btn-primary">↓ Descargar PDF</a>
+    </div>
+    
+    <div style="margin-top: 1.5rem;">
+      <p style="font-weight: 600; margin-bottom: 0.8rem;">📱 Contacto y Seguimiento</p>
+      <p><strong>Email:</strong> <a href="mailto:alahuelgaeducativaenandalucia@gmail.com">alahuelgaeducativaenandalucia@gmail.com</a></p>
+      <a href="https://whatsapp.com/channel/0029VbCrDvS6GcGIzn8xy91o" target="_blank" class="btn-primary">💚 Canal WhatsApp</a>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 2.5rem; color: #188038; border-bottom: 2px solid #188038; padding-bottom: 0.5rem;">🎓 Universidades Andaluzas por la Pública (UAX)</h3>
+  
+  <div style="background: #f0f8f4; padding: 1.5rem; border-left: 4px solid #188038; border-radius: 4px; margin: 1.5rem 0;">
+    <h4 style="color: #188038; margin-bottom: 0.8rem;">Materiales de UAX</h4>
+    <p>Accede al manifiesto de la plataforma y adhiérete si tu organización comparte los objetivos de UAX.</p>
+    
+    <div style="margin-top: 1.5rem;">
+      <p style="font-weight: 600; margin-bottom: 0.8rem;">📋 Manifiesto UAX</p>
+      <a href="manifiesto_universidad.pdf" download class="btn-primary">↓ Descargar PDF</a>
+    </div>
+    
+    <div style="margin-top: 1.5rem;">
+      <p style="font-weight: 600; margin-bottom: 0.8rem;">✍️ Formulario de Adhesión</p>
+      <p>¿Tu organización quiere adherirse formalmente a la plataforma UAX?</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3uioiaxajbFNOA-msA4ngmuybImlHifyZWj7WEVPrZQr0IQ/viewform?usp=dialog" target="_blank" class="btn-primary">📝 Ir al Formulario</a>
+    </div>
+    
+    <div style="margin-top: 1.5rem;">
+      <p style="font-weight: 600; margin-bottom: 0.8rem;">📱 Contacto y Seguimiento</p>
+      <p><strong>Email:</strong> <a href="mailto:uaxlapublica@gmail.com">uaxlapublica@gmail.com</a></p>
+      <a href="https://www.instagram.com/uaxlapublica/" target="_blank" class="btn-primary">📸 @uaxlapublica</a>
+    </div>
+  </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #188038 0%, #0f5233 100%); color: white; text-align: center; padding: 2rem 1rem;">
+  <h2 style="color: white; border: none; font-size: 1.8rem; margin-bottom: 1.5rem;">
+    ¿Tienes preguntas? ¡Ponte en contacto!
+  </h2>
+  <p style="margin-bottom: 1.5rem; font-size: 0.95rem;">
+    Si necesitas más información sobre el encuentro o tienes alguna duda, escribe a cualquiera de los dos contactos:
+  </p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+    <div>
+      <p style="font-weight: 600; margin-bottom: 0.8rem;">🟢 #NoviembreVerde</p>
+      <a href="mailto:alahuelgaeducativaenandalucia@gmail.com" style="color: white; text-decoration: underline;">alahuelgaeducativaenandalucia@gmail.com</a>
+    </div>
+    <div>
+      <p style="font-weight: 600; margin-bottom: 0.8rem;">🎓 Universidades Andaluzas por la Pública</p>
+      <a href="mailto:uaxlapublica@gmail.com" style="color: white; text-decoration: underline;">uaxlapublica@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<section class="footer-nav">
+  <a href="../index.html">🏠 Inicio</a>
+  <a href="../encuentro-antequera.html">📍 Encuentro Antequera (18 o 19 julio)</a>
+</section>
+
+<footer>
+  <p>&copy; 2026 Universidades Andaluzas por la Pública (UAX) | #NoviembreVerde</p>
+  <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.9;">En defensa de la educación pública andaluza 💚</p>
+</footer>
+
+</body>
+</html>
