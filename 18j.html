@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>18 de Julio - Asamblea Presencial en Antequera</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bebas+Neue:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -11,20 +12,21 @@
       box-sizing: border-box;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
       line-height: 1.6;
-      background: #fafafa;
+      background: #F7F7F4;
       color: #333;
       min-height: 100vh;
     }
     header {
-      background: #188038;
+      background: #2E7D32;
       color: white;
       padding: 3rem 1rem;
       text-align: center;
-      border-bottom: 3px solid #0f5233;
+      border-bottom: 3px solid #1b5e20;
     }
     header h1 {
+      font-family: 'Bebas Neue', cursive;
       font-size: 3rem;
       margin-bottom: 1rem;
       font-weight: 800;
@@ -47,19 +49,21 @@
       border-bottom: 1px solid #e5e5e5;
     }
     h2 {
+      font-family: 'Bebas Neue', cursive;
       font-size: 1.6rem;
       margin-bottom: 1.2rem;
-      color: #188038;
-      border-bottom: 2px solid #188038;
+      color: #2E7D32;
+      border-bottom: 2px solid #2E7D32;
       padding-bottom: 0.5rem;
-      font-weight: 600;
+      font-weight: 700;
     }
     h3 {
+      font-family: 'Bebas Neue', cursive;
       font-size: 1.15rem;
-      color: #188038;
+      color: #2E7D32;
       margin-top: 1.2rem;
       margin-bottom: 0.8rem;
-      font-weight: 600;
+      font-weight: 700;
     }
     p {
       margin-bottom: 1rem;
@@ -75,31 +79,35 @@
       line-height: 1.6;
       font-size: 0.95rem;
     }
+    h4 {
+      font-family: 'Bebas Neue', cursive;
+      font-weight: 700;
+    }
     .info-card {
-      background: #f5f5f5;
+      background: #CFE6F5;
       padding: 1.5rem;
-      border-left: 3px solid #188038;
+      border-left: 3px solid #2E7D32;
       margin: 1.5rem 0;
       border-radius: 4px;
     }
     .info-card h4 {
-      color: #188038;
+      color: #2E7D32;
       font-size: 1.1rem;
       margin-bottom: 0.8rem;
       font-weight: 600;
     }
     .highlight-box {
-      background: linear-gradient(135deg, #f0f8f4 0%, #e8f5f0 100%);
+      background: linear-gradient(135deg, #CFE6F5 0%, #E8F1F8 100%);
       padding: 2rem;
       border-radius: 8px;
-      border: 2px solid #188038;
+      border: 2px solid #2E7D32;
       margin: 2rem 0;
       text-align: center;
     }
     .highlight-box h3 {
       margin-top: 0;
       font-size: 1.4rem;
-      color: #188038;
+      color: #2E7D32;
     }
     .highlight-box p {
       font-size: 1rem;
@@ -112,20 +120,20 @@
       margin: 1.5rem 0;
     }
     .grid-item {
-      background: #f5f5f5;
+      background: #CFE6F5;
       padding: 1.5rem;
-      border-left: 3px solid #188038;
+      border-left: 3px solid #2E7D32;
       border-radius: 4px;
     }
     .grid-item h4 {
-      color: #188038;
+      color: #2E7D32;
       margin-bottom: 0.8rem;
       font-weight: 600;
       font-size: 1rem;
     }
     .btn-primary {
       display: inline-block;
-      background: #188038;
+      background: #2E7D32;
       color: white;
       padding: 1rem 2rem;
       font-weight: 600;
@@ -137,19 +145,19 @@
       cursor: pointer;
     }
     .btn-primary:hover {
-      background: #0f5233;
+      background: #E85D3D;
       color: white;
       text-decoration: none;
     }
     .agenda-item {
-      background: #f5f5f5;
+      background: #CFE6F5;
       padding: 1.2rem;
-      border-left: 3px solid #188038;
+      border-left: 3px solid #2E7D32;
       border-radius: 4px;
       margin-bottom: 1rem;
     }
     .agenda-item h4 {
-      color: #188038;
+      color: #2E7D32;
       margin-bottom: 0.6rem;
       font-weight: 600;
       font-size: 1rem;
@@ -165,11 +173,11 @@
       margin-bottom: 0;
     }
     .contact-section {
-      background: linear-gradient(135deg, #f0f8f4 0%, #e8f5f0 100%);
+      background: linear-gradient(135deg, #CFE6F5 0%, #E8F1F8 100%);
       padding: 2rem;
       border-radius: 8px;
       margin: 1.5rem 0;
-      border: 2px solid #188038;
+      border: 2px solid #2E7D32;
     }
     .contact-section h3 {
       margin-top: 0;
@@ -181,7 +189,7 @@
     }
     .contact-section a {
       display: inline-block;
-      background: #188038;
+      background: #2E7D32;
       color: white;
       padding: 0.8rem 1.5rem;
       text-decoration: none;
@@ -190,7 +198,7 @@
       margin-top: 1rem;
     }
     .contact-section a:hover {
-      background: #0f5233;
+      background: #E85D3D;
       text-decoration: none;
     }
     .footer-nav {
@@ -201,7 +209,7 @@
     }
     .footer-nav a {
       display: inline-block;
-      background: #188038;
+      background: #2E7D32;
       color: white;
       padding: 0.8rem 1.5rem;
       text-decoration: none;
@@ -211,11 +219,11 @@
       transition: background 0.2s ease;
     }
     .footer-nav a:hover {
-      background: #0f5233;
+      background: #E85D3D;
       color: white;
     }
     footer {
-      background: #188038;
+      background: #2E7D32;
       color: white;
       text-align: center;
       padding: 1.5rem;
@@ -223,31 +231,31 @@
       font-size: 0.95rem;
     }
     a {
-      color: #188038;
+      color: #2E7D32;
       text-decoration: underline;
       font-weight: 500;
       transition: color 0.2s ease;
     }
     a:hover {
-      color: #0f5233;
+      color: #E85D3D;
     }
     .location-info {
-      background: #fff3cd;
-      border-left: 4px solid #ffc107;
+      background: #CFE6F5;
+      border-left: 4px solid #1E5FAE;
       padding: 1rem;
       margin: 1.5rem 0;
       border-radius: 4px;
-      color: #856404;
+      color: #0c3c8a;
     }
     .registration-box {
-      background: #e8f5e9;
-      border-left: 4px solid #4caf50;
+      background: #E8F5E9;
+      border-left: 4px solid #2E7D32;
       padding: 1.5rem;
       margin: 1.5rem 0;
       border-radius: 4px;
     }
     .registration-box h4 {
-      color: #2e7d32;
+      color: #2E7D32;
       margin-bottom: 0.8rem;
       font-weight: 600;
     }
@@ -343,7 +351,7 @@
 <section>
   <h2>📋 Orden del Día</h2>
   
-  <div class="location-info" style="background: #fff3cd; border-left: 4px solid #ffc107; color: #856404;">
+  <div class="location-info" style="background: #CFE6F5; border-left: 4px solid #1E5FAE; color: #0c3c8a;">
     <strong>⚠️ Nota importante:</strong><br>
     Los tiempos son estimados. El objetivo de esta asamblea es hacer un análisis compartido de la situación, definir reivindicaciones comunes y establecer una hoja de ruta de acciones conjuntas.
   </div>
@@ -404,10 +412,10 @@
   
   <p>A continuación encontrarás los materiales necesarios para preparar tu participación en la asamblea.</p>
 
-  <h3 style="margin-top: 2rem; color: #188038; border-bottom: 2px solid #188038; padding-bottom: 0.5rem;">📋 Documentos de Trabajo</h3>
+  <h3 style="margin-top: 2rem; color: #2E7D32; border-bottom: 2px solid #2E7D32; padding-bottom: 0.5rem;">📋 Documentos de Trabajo</h3>
   
-  <div style="background: #f0f8f4; padding: 1.5rem; border-left: 4px solid #188038; border-radius: 4px; margin: 1.5rem 0;">
-    <h4 style="color: #188038; margin-bottom: 0.8rem;">Manifiesto por la Dignidad de la Educación Pública en Andalucía</h4>
+  <div style="background: #CFE6F5; padding: 1.5rem; border-left: 4px solid #2E7D32; border-radius: 4px; margin: 1.5rem 0;">
+    <h4 style="color: #2E7D32; margin-bottom: 0.8rem;">Manifiesto por la Dignidad de la Educación Pública en Andalucía</h4>
     <p>Documento de trabajo que servirá como base para el análisis y la elaboración de la tabla reivindicativa en la asamblea.</p>
     
     <div style="margin-top: 1.5rem;">
@@ -416,8 +424,8 @@
     </div>
   </div>
 
-  <div style="background: #f0f8f4; padding: 1.5rem; border-left: 4px solid #188038; border-radius: 4px; margin: 1.5rem 0;">
-    <h4 style="color: #188038; margin-bottom: 0.8rem;">Documento de Trabajo para el Diálogo y la Negociación Institucional</h4>
+  <div style="background: #CFE6F5; padding: 1.5rem; border-left: 4px solid #2E7D32; border-radius: 4px; margin: 1.5rem 0;">
+    <h4 style="color: #2E7D32; margin-bottom: 0.8rem;">Documento de Trabajo para el Diálogo y la Negociación Institucional</h4>
     <p>Propuesta de trabajo para impulsar el diálogo y la negociación con las instituciones en defensa de la educación pública andaluza.</p>
     
     <div style="margin-top: 1.5rem;">
@@ -426,9 +434,9 @@
     </div>
   </div>
 
-  <h3 style="margin-top: 2rem; color: #188038; border-bottom: 2px solid #188038; padding-bottom: 0.5rem;">🟢 #NoviembreVerde y UAX</h3>
+  <h3 style="margin-top: 2rem; color: #2E7D32; border-bottom: 2px solid #2E7D32; padding-bottom: 0.5rem;">🟢 #NoviembreVerde y UAX</h3>
   
-  <div style="background: #f0f8f4; padding: 1.5rem; border-left: 4px solid #188038; border-radius: 4px; margin: 1.5rem 0;">
+  <div style="background: #CFE6F5; padding: 1.5rem; border-left: 4px solid #2E7D32; border-radius: 4px; margin: 1.5rem 0;">
     <p style="margin-bottom: 1rem;">Síguenos en nuestros canales:</p>
     
     <div style="margin-top: 1.5rem;">
