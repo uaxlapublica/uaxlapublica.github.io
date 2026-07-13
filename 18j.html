@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>18 de Julio - Asamblea Presencial en Antequera</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      background: #fafafa;
+      color: #333;
+      min-height: 100vh;
+    }
+    header {
+      background: #188038;
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-bottom: 3px solid #0f5233;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+    .highlight {
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    section {
+      padding: 2.5rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+      color: #188038;
+      border-bottom: 2px solid #188038;
+      padding-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #188038;
+      margin-top: 1.2rem;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+    p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    .info-card {
+      background: #f5f5f5;
+      padding: 1.5rem;
+      border-left: 3px solid #188038;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+    }
+    .info-card h4 {
+      color: #188038;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+    .highlight-box {
+      background: linear-gradient(135deg, #f0f8f4 0%, #e8f5f0 100%);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 2px solid #188038;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .highlight-box h3 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: #188038;
+    }
+    .highlight-box p {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .grid-item {
+      background: #f5f5f5;
+      padding: 1.5rem;
+      border-left: 3px solid #188038;
+      border-radius: 4px;
+    }
+    .grid-item h4 {
+      color: #188038;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: #188038;
+      color: white;
+      padding: 1rem 2rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.2s ease;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background: #0f5233;
+      color: white;
+      text-decoration: none;
+    }
+    .agenda-item {
+      background: #f5f5f5;
+      padding: 1.2rem;
+      border-left: 3px solid #188038;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    .agenda-item h4 {
+      color: #188038;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .agenda-item .time {
+      font-size: 0.9rem;
+      color: #555;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .agenda-item p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+    .contact-section {
+      background: linear-gradient(135deg, #f0f8f4 0%, #e8f5f0 100%);
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      border: 2px solid #188038;
+    }
+    .contact-section h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+    .contact-section p {
+      text-align: center;
+      font-size: 1rem;
+    }
+    .contact-section a {
+      display: inline-block;
+      background: #188038;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    .contact-section a:hover {
+      background: #0f5233;
+      text-decoration: none;
+    }
+    .footer-nav {
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 2rem;
+      border-top: 2px solid #e5e5e5;
+    }
+    .footer-nav a {
+      display: inline-block;
+      background: #188038;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      margin: 0.5rem;
+      font-weight: 500;
+      transition: background 0.2s ease;
+    }
+    .footer-nav a:hover {
+      background: #0f5233;
+      color: white;
+    }
+    footer {
+      background: #188038;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 0;
+      font-size: 0.95rem;
+    }
+    a {
+      color: #188038;
+      text-decoration: underline;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: #0f5233;
+    }
+    .location-info {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+      color: #856404;
+    }
+    .registration-box {
+      background: #e8f5e9;
+      border-left: 4px solid #4caf50;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+    }
+    .registration-box h4 {
+      color: #2e7d32;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+    .registration-box p {
+      color: #1b5e20;
+    }
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .cartel-image {
+      max-width: 350px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 1.5rem auto;
+      display: block;
+    }
+    .map-container {
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>💚 18 de Julio 💚</h1>
+  <p class="highlight">
+    <strong>Asamblea Presencial en Antequera</strong>
+  </p>
+  <p class="highlight" style="font-style: italic; margin-top: 0.8rem; font-size: 1.95rem; font-weight: 900;">
+    Encuentro Educación Pública Andaluza 
+  </p>
+</header>
+
+<section>
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <img src="18J/cartel.jpeg" alt="Cartel 18 de Julio" class="cartel-image">
+  </div>
+
+  <h2>📍 Lugar y Fecha</h2>
+  
+  <div class="highlight-box">
+    <h3 style="margin-top: 0;">18 de Julio | Antequera</h3>
+    <p style="font-size: 1.05rem; margin-bottom: 0;">
+      <strong>Sede de CCOO</strong>
+    </p>
+  </div>
+
+  <div class="location-info">
+    <strong>⏰ Recepción de participantes:</strong> 10:00 - 10:30 h<br>
+    <strong>📍 Ubicación:</strong> Sede de CCOO en Antequera<br>
+    <strong>📋 Duración estimada:</strong> 10:00 - 14:30 h<br>
+    <strong>🗺️ Google Maps:</strong> <a href="https://maps.app.goo.gl/ZPWkadWQ9FaEBMzA6" target="_blank">Ver ubicación</a>
+  </div>
+
+  <p>
+    Un espacio abierto, plural y participativo para seguir construyendo propuestas y coordinación en defensa de la educación pública andaluza.
+  </p>
+</section>
+
+<section>
+  <h2>✍️ Inscripción y Participación</h2>
+  
+  <div class="registration-box">
+    <h4>📝 Formulario de Inscripción</h4>
+    <p style="margin-bottom: 1rem;">
+      Si deseas asistir a la asamblea, completa el formulario de inscripción. Esto nos ayudará a organizar mejor el espacio y los materiales.
+    </p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrgkrhtNMk0tf503sjhwMAKV3EP2Ar2iueWvpUjpd_l3e9HQ/viewform" target="_blank" class="btn-primary">🖊️ Acceder al Formulario</a>
+  </div>
+
+</section>
+
+<section>
+  <h2>📋 Orden del Día</h2>
+  
+  <div class="location-info" style="background: #fff3cd; border-left: 4px solid #ffc107; color: #856404;">
+    <strong>⚠️ Nota importante:</strong><br>
+    Los tiempos son estimados. El objetivo de esta asamblea es hacer un análisis compartido de la situación, definir reivindicaciones comunes y establecer una hoja de ruta de acciones conjuntas.
+  </div>
+
+  <div class="schedule-grid">
+    <div class="agenda-item">
+      <div class="time">10:00 - 10:30</div>
+      <h4>🟢 Recepción de participantes</h4>
+      <p>Bienvenida y acreditación de participantes</p>
+    </div>
+
+    <div class="agenda-item">
+      <div class="time">10:30 - 10:35 (5 minutos)</div>
+      <h4>🔹 Elección de moderación y toma de acta</h4>
+      <p>Constitución de la mesa y designación de equipo moderador</p>
+    </div>
+
+    <div class="agenda-item">
+      <div class="time">10:35 - 10:45 (10 minutos)</div>
+      <h4>🔹 Propuesta, debate y aprobación del Orden del día</h4>
+      <p>Revisión y validación del programa de la asamblea</p>
+    </div>
+
+    <div class="agenda-item">
+      <div class="time">10:45 - 12:00 (1 hora 15 minutos)</div>
+      <h4>🔹 Análisis de situación y elaboración tabla reivindicativa</h4>
+      <p>Partiendo del manifiesto base, se realizará un análisis compartido de la situación de la educación pública andaluza y se elaborarán las reivindicaciones comunes</p>
+    </div>
+
+    <div class="agenda-item">
+      <div class="time">12:00 - 12:30 (30 minutos)</div>
+      <h4>🔹 Atención a medios y Foto de Familia</h4>
+      <p>Presentación ante medios de comunicación y registro fotográfico del encuentro</p>
+    </div>
+
+    <div class="agenda-item">
+      <div class="time">12:30 - 13:15 (45 minutos)</div>
+      <h4>🔹 Estructuración del movimiento</h4>
+      <p>Definición de estructuras de coordinación y funcionamiento del movimiento conjunto</p>
+    </div>
+
+    <div class="agenda-item">
+      <div class="time">13:15 - 14:15 (1 hora)</div>
+      <h4>🔹 Hoja de ruta, acciones y huelga</h4>
+      <p>Planificación de acciones concretas, calendario de movilizaciones y coordinación de huelgas</p>
+    </div>
+
+    <div class="agenda-item">
+      <div class="time">14:15 - 14:30 (15 minutos)</div>
+      <h4>🔹 Repaso de acuerdos y cierre</h4>
+      <p>Síntesis de acuerdos alcanzados, confirmación de próximas acciones y despedida</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>📚 Descargas y Recursos</h2>
+  
+  <p>A continuación encontrarás los materiales necesarios para preparar tu participación en la asamblea.</p>
+
+  <h3 style="margin-top: 2rem; color: #188038; border-bottom: 2px solid #188038; padding-bottom: 0.5rem;">📋 Documentos de Trabajo</h3>
+  
+  <div style="background: #f0f8f4; padding: 1.5rem; border-left: 4px solid #188038; border-radius: 4px; margin: 1.5rem 0;">
+    <h4 style="color: #188038; margin-bottom: 0.8rem;">Manifiesto Base</h4>
+    <p>Documento de trabajo que servirá como base para el análisis y la elaboración de la tabla reivindicativa en la asamblea.</p>
+    
+    <div style="margin-top: 1.5rem;">
+      <p style="font-weight: 600; margin-bottom: 0.8rem;">📄 Manifiesto de Trabajo</p>
+      <a href="https://drive.google.com/file/d/1lkXhzMn9kFV9p2Xk4HIyMCaPnJ-P1q2P/view" target="_blank" class="btn-primary">📖 Ver Documento</a>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 2rem; color: #188038; border-bottom: 2px solid #188038; padding-bottom: 0.5rem;">🟢 #NoviembreVerde y UAX</h3>
+  
+  <div style="background: #f0f8f4; padding: 1.5rem; border-left: 4px solid #188038; border-radius: 4px; margin: 1.5rem 0;">
+    <p style="margin-bottom: 1rem;">Síguenos en nuestros canales:</p>
+    
+    <div style="margin-top: 1.5rem;">
+      <p style="font-weight: 600; margin-bottom: 0.8rem;">🟢 #NoviembreVerde</p>
+      <a href="https://whatsapp.com/channel/0029VbCrDvS6GcGIzn8xy91o" target="_blank" class="btn-primary">💚 Canal WhatsApp</a>
+    </div>
+
+    <div style="margin-top: 1.5rem;">
+      <p style="font-weight: 600; margin-bottom: 0.8rem;">🎓 Universidades Andaluzas por la Pública</p>
+      <a href="https://www.instagram.com/uaxlapublica/" target="_blank" class="btn-primary">📸 @uaxlapublica</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p style="font-size: 2.9rem; margin-top: 0.5rem; opacity: 0.9;">En defensa de la educación pública andaluza </p>
+</footer>
+
+</body>
+</html>
